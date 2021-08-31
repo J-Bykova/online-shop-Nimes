@@ -1,0 +1,31 @@
+@import '../../utils/colors';
+@import '../../utils/sizes';
+@import '../../utils/fonts';
+@import '../../utils/resets';
+
+.header {
+
+}
+
+/*Menu*/
+.header__nav {}
+.header__nav-menu {
+  @include reset-list;
+}
+.header__nav-menu-item {}
+.header__nav-menu-link {
+  font-family: $primary-font;
+}
+
+/*Logo*/
+.header__logo {}
+
+/*Action-buttons*/
+.header__actions {
+  @include reset-list;
+}
+.header__action {}
+.header__action-button {}
+
+.header__action-button--search {}
+.header__action-button--cart {}

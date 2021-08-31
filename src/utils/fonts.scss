@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+$primary-font: 'Work Sans', serif;
+$secondary-font: 'Anton', serif;
+
+@mixin set-font($fontSize, $fontLine) {
+  font-size: #{$fontSize}px;
+  line-height: #{$fontLine}px;
+}
