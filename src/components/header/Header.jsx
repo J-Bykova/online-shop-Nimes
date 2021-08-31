@@ -4,7 +4,7 @@ import "./Header.scss";
 export default function Header() {
   return (
     <header className="header">
-      <nav className="header__menu header__menu--close">
+      <nav className="header__menu header__menu--open">
         <ul className="header__menu-items">
           <li className="header__menu-item">
             <a className="header__menu-link">Woman</a>
@@ -26,7 +26,7 @@ export default function Header() {
           <li className="header__nav-action">
             <button className="header__nav-button header__nav-button--cart"></button>
           </li>
-          <li className="header__nav-action header__nav-button--onMobile">
+          <li className="header__nav-action header__nav-action--onMobile">
             <button className="header__nav-button header__nav-button--burger"></button>
           </li>
         </ul>

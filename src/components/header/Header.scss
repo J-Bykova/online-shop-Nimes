@@ -9,6 +9,11 @@
   align-items: center;
 
   @include onMobile {
+    display: grid;
+    grid-template-columns: 1fr 140px;
+    grid-template-areas:
+    "nav nav"
+    "menu menu";
   }
 
   @include onMobileXl {
@@ -18,11 +23,32 @@
     "nav nav"
     ". menu";
   }
+
+  @include onTablet {
+    padding: 24px 48px;
+  }
+
+  @include onDesktop {
+    padding: 48px 100px;
+  }
 }
+
 
 /*Menu*/
 .header__menu {
   display: block;
+
+  @include onMobile {
+    &--open {
+      grid-area: menu;
+      display: block;
+      background-color: $basic-white;
+    }
+
+    &--close {
+      display: none;
+    }
+  }
 
   @include onMobileXl {
     &--open {
@@ -38,8 +64,13 @@
 }
 
 .header__menu-items {
+
   @include reset-list;
   display: flex;
+
+  @include onMobile {
+    display: block;
+  }
 
   @include onMobileXl {
     display: block;
@@ -49,13 +80,26 @@
 .header__menu-item {
   &:first-of-type {
     margin: 0;
-    border-top: none;
+  }
+
+  @include onMobile {
+    padding: 8px 0;
+    text-align: center;
+    border-top: 1px solid $border-light-gray;
   }
 
   @include onMobileXl {
     padding: 8px 0;
     text-align: center;
     border-top: 1px solid $border-light-gray;
+  }
+
+  @include onTablet {
+    margin-left: 24px;
+  }
+
+  @include onDesktop {
+    margin-left: 32px;
   }
 }
 
@@ -75,15 +119,22 @@
   }
 }
 
+
+/*Navigation*/
 .header__nav {
-  @include onMobileXl {
-    grid-area: nav;
+  grid-area: nav;
+  display: flex;
+  justify-content: space-between;
+
+  @include onMobile {
     padding: 16px;
-    display: flex;
-    justify-content: space-between;
   }
 
+  @include onMobileXl {
+    padding: 16px;
+  }
 }
+
 
 /*Logo*/
 .header__nav-logo {
@@ -95,6 +146,11 @@
   width: 75px;
   height: 17px;
 
+  @include onTablet {
+    display: flex;
+    justify-content: center;
+  }
+
   &:hover {
     opacity: 70%;
   }
@@ -104,15 +160,12 @@
   }
 }
 
+
 /*Action-buttons*/
 .header__nav-actions {
   @include reset-list;
   display: flex;
   align-items: center;
-
-  @include onMobileXl {
-    //justify-content: flex-end;
-  }
 }
 
 .header__nav-action {
@@ -124,6 +177,14 @@
     display: none;
   }
 
+  @include onMobile {
+    margin-left: 24px;
+
+    &--onMobile {
+      display: block;
+    }
+  }
+
   @include onMobileXl {
     margin-left: 24px;
 
@@ -132,12 +193,12 @@
     }
   }
 
-  @include onMobile {
-    margin-left: 12px;
+  @include onTablet {
+    margin-left: 24px;
+  }
 
-    &--onMobile {
-      display: block;
-    }
+  @include onDesktop {
+    margin-left: 32px;
   }
 }
 
