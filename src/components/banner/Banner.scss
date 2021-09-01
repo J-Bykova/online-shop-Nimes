@@ -1,0 +1,134 @@
+@import '../../utils/colors';
+@import '../../utils/sizes';
+@import '../../utils/fonts';
+@import '../../utils/resets';
+
+.banner {
+  background-color: $background-gray;
+
+  @include onTablet {
+    padding: 0 48px 0 48px;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.banner__info {
+  @include onMobile {
+    padding: 24px 16px 34px 16px;
+    text-align: center;
+  }
+
+  @include onMobileXl {
+    padding: 34px 26px 44px 26px;
+    text-align: center;
+  }
+
+  @include onTablet {
+    padding: 49px 20px 49px 20px;
+    text-align: center;
+    margin: auto 0;
+  }
+}
+
+.banner__info-subtitle {
+  margin: 0;
+  font-family: $primary-font;
+  font-weight: 400;
+  color: $basic-gray;
+
+  @include onMobile {
+    @include set-font(12, 14);
+  }
+
+  @include onMobileXl {
+    @include set-font(12, 14);
+  }
+
+  @include onTablet {
+    @include set-font(16, 18);
+  }
+}
+
+.banner__info-title {
+  margin: 0;
+  font-family: $secondary-font;
+  font-weight: 400;
+  text-transform: uppercase;
+
+  @include onMobile {
+    @include set-font(60, 65);
+  }
+
+  @include onMobileXl {
+    @include set-font(70, 72);
+  }
+
+  @include onTablet {
+    @include set-font(100, 102);
+  }
+}
+
+.banner__info-button {
+  @include reset-button;
+  font-family: $primary-font;
+  font-weight: 700;
+  background-color: $background-black;
+  color: $basic-white;
+
+  @include onMobile {
+    margin-top: 16px;
+    padding: 18px 22px;
+    @include set-font(12, 14);
+  }
+
+  @include onMobileXl {
+    margin-top: 16px;
+    padding: 18px 22px;
+    @include set-font(12, 14);
+  }
+
+  @include onTablet {
+    margin-top: 26px;
+    padding: 28px 44px;
+    @include set-font(14, 16);
+  }
+}
+
+.banner__context {
+  @include onTablet {
+    position: relative;
+    padding: 49px 20px 49px 20px;
+
+    &::before,
+    &::after {
+      position: absolute;
+      display: block;
+      content: "";
+      background-image: url("diagonal.svg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 232px;
+      height: 176px;
+      z-index: 0;
+    }
+
+    &::before {
+      top: 0;
+      left: 0;
+    }
+
+    &::after {
+      bottom: 0;
+      right: 0;
+    }
+  }
+}
+
+.banner__context-photo {
+  background-color: $background-black;
+
+  @include onTablet {
+    z-index: 1;
+  }
+}

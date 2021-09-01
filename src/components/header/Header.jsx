@@ -4,7 +4,7 @@ import "./Header.scss";
 export default function Header() {
   return (
     <header className="header">
-      <nav className="header__menu header__menu--open">
+      <nav className="header__menu header__menu--close">
         <ul className="header__menu-items">
           <li className="header__menu-item">
             <a className="header__menu-link">Woman</a>
