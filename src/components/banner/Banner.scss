@@ -11,6 +11,12 @@
     display: flex;
     justify-content: center;
   }
+
+  @include onDesktop {
+    padding: 0 48px 0 48px;
+    display: flex;
+    justify-content: center;
+  }
 }
 
 .banner__info {
@@ -26,7 +32,13 @@
 
   @include onTablet {
     padding: 49px 20px 49px 20px;
-    text-align: center;
+    text-align: start;
+    margin: auto 0;
+  }
+
+  @include onDesktop {
+    padding: 50px 25px 50px 25px;
+    text-align: start;
     margin: auto 0;
   }
 }
@@ -48,6 +60,10 @@
   @include onTablet {
     @include set-font(16, 18);
   }
+
+  @include onDesktop {
+    @include set-font(18, 21);
+  }
 }
 
 .banner__info-title {
@@ -66,6 +82,10 @@
 
   @include onTablet {
     @include set-font(100, 102);
+  }
+
+  @include onDesktop {
+    @include set-font(128, 130);
   }
 }
 
@@ -90,15 +110,49 @@
 
   @include onTablet {
     margin-top: 26px;
-    padding: 28px 44px;
+    padding: 28px 24px;
     @include set-font(14, 16);
+  }
+
+  @include onDesktop {
+    margin-top: 26px;
+    padding: 28px 24px;
+    @include set-font(16, 18);
   }
 }
 
 .banner__context {
   @include onTablet {
     position: relative;
-    padding: 49px 20px 49px 20px;
+    padding: 50px 20px 50px 20px;
+
+    &::before,
+    &::after {
+      position: absolute;
+      display: block;
+      content: "";
+      background-image: url("diagonal.svg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 232px;
+      height: 176px;
+      z-index: 0;
+    }
+
+    &::before {
+      top: 0;
+      left: 0;
+    }
+
+    &::after {
+      bottom: 0;
+      right: 0;
+    }
+  }
+
+  @include onDesktop {
+    position: relative;
+    padding: 50px 25px 50px 25px;
 
     &::before,
     &::after {
@@ -129,6 +183,10 @@
   background-color: $background-black;
 
   @include onTablet {
+    z-index: 1;
+  }
+
+  @include onDesktop {
     z-index: 1;
   }
 }
