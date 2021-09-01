@@ -37,7 +37,7 @@
   }
 
   @include onDesktop {
-    padding: 50px 25px 50px 25px;
+    padding: 50px;
     text-align: start;
     margin: auto 0;
   }
@@ -152,7 +152,7 @@
 
   @include onDesktop {
     position: relative;
-    padding: 50px 25px 50px 25px;
+    padding: 50px;
 
     &::before,
     &::after {
