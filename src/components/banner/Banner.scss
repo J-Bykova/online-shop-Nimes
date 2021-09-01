@@ -164,7 +164,6 @@
       background-size: cover;
       width: 232px;
       height: 176px;
-      z-index: 0;
     }
 
     &::before {
@@ -183,10 +182,12 @@
   background-color: $background-black;
 
   @include onTablet {
+    position: relative;
     z-index: 1;
   }
 
   @include onDesktop {
+    position: relative;
     z-index: 1;
   }
 }
