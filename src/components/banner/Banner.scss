@@ -19,7 +19,7 @@
   }
 }
 
-.banner__info {
+.banner__text-container {
   @include onMobile {
     padding: 24px 16px 34px 16px;
     text-align: center;
@@ -43,7 +43,7 @@
   }
 }
 
-.banner__info-subtitle {
+.banner__subtitle {
   margin: 0;
   font-family: $primary-font;
   font-weight: 400;
@@ -66,7 +66,7 @@
   }
 }
 
-.banner__info-title {
+.banner__title {
   margin: 0;
   font-family: $secondary-font;
   font-weight: 400;
@@ -89,7 +89,7 @@
   }
 }
 
-.banner__info-button {
+.banner__button {
   @include reset-button;
   font-family: $primary-font;
   font-weight: 700;
@@ -121,7 +121,7 @@
   }
 }
 
-.banner__context {
+.banner__photo-container {
   @include onTablet {
     position: relative;
     padding: 50px 20px 50px 20px;
@@ -178,7 +178,7 @@
   }
 }
 
-.banner__context-photo {
+.banner__photo {
   background-color: $background-black;
 
   @include onTablet {
