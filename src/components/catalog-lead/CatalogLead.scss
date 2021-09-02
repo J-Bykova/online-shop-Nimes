@@ -174,9 +174,10 @@
 }
 
 .catalog-lead__photo {
-  background-color: $background-img;
+  display: block;
   position: relative;
   z-index: 1;
+  background-color: $background-img;
 }
 
 
