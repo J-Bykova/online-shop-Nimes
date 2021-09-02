@@ -1,0 +1,182 @@
+@import '../../utils/colors';
+@import '../../utils/sizes';
+@import '../../utils/fonts';
+@import '../../utils/resets';
+
+.catalog-lead {
+  background-color: $background-gray;
+
+  @include onTablet {
+    padding: 0 48px;
+    display: flex;
+    justify-content: center;
+  }
+
+  @include onDesktop {
+    padding: 0 48px;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.catalog-lead__text-container {
+  @include onMobile {
+    padding: 14px 16px;
+  }
+
+  @include onMobileXl {
+    padding: 14px 26px;
+  }
+
+  @include onTablet {
+    padding: 0 20px;
+    text-align: start;
+    margin: auto 0;
+  }
+
+  @include onDesktop {
+    padding: 0 30px;
+    text-align: start;
+    margin: auto 0;
+  }
+}
+
+.breadcrumbs {
+  @include reset-list;
+  display: flex;
+}
+
+.breadcrumb {
+  margin-left: 28px;
+  position: relative;
+
+  &:first-of-type {
+    margin: 0;
+  }
+}
+
+.breadcrumb__link {
+  cursor: pointer;
+  font-family: $primary-font;
+  font-weight: 500;
+  color: $basic-gray;
+  font-style: normal;
+
+  &--active {
+    color: $basic-black;
+  }
+
+  @include onMobile {
+    @include set-font(14, 16);
+  }
+
+  @include onMobileXl {
+    @include set-font(16, 18);
+  }
+
+  @include onTablet {
+    @include set-font(16, 18);
+  }
+
+  @include onDesktop {
+    @include set-font(18, 21);
+  }
+
+  &:hover {
+    opacity: 70%;
+  }
+
+  &:active {
+    opacity: 40%;
+  }
+}
+
+.catalog-lead__title {
+  margin: 0;
+  text-align: start;
+  font-family: $primary-font;
+  font-weight: 700;
+  color: $basic-black;
+  font-style: normal;
+  @include set-font(32, 40);
+
+  @include onMobile {
+    margin: 18px 0 0 0;
+  }
+
+  @include onMobileXl {
+    margin: 18px 0 0 0;
+  }
+
+  @include onTablet {
+    margin: 39px 0 0 0;
+  }
+
+  @include onDesktop {
+    margin: 39px 0 0 0;
+  }
+}
+
+.catalog-lead__photo-container {
+  position: relative;
+  text-align: center;
+
+  &::before,
+  &::after {
+    position: absolute;
+    display: block;
+    content: "";
+    background-image: url("diagonal.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 0;
+  }
+
+  @include onTablet {
+    padding: 0 20px;
+
+    &::before,
+    &::after {
+      width: 178px;
+      height: 135px;
+    }
+
+    &::before {
+      top: 0;
+      right: 0;
+    }
+
+    &::after {
+      bottom: 0;
+      left: 0;
+    }
+  }
+
+  @include onDesktop {
+    padding: 0 30px;
+
+    &::before,
+    &::after {
+      width: 178px;
+      height: 135px;
+    }
+
+    &::before {
+      top: 0;
+      right: 0;
+    }
+
+    &::after {
+      bottom: 0;
+      left: 0;
+    }
+  }
+}
+
+.catalog-lead__photo {
+  background-color: $background-img;
+  position: relative;
+  z-index: 1;
+}
+
+

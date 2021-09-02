@@ -48,6 +48,7 @@
   font-family: $primary-font;
   font-weight: 400;
   color: $basic-gray;
+  font-style: normal;
 
   @include onMobile {
     @include set-font(12, 14);
@@ -71,6 +72,7 @@
   font-family: $secondary-font;
   font-weight: 400;
   text-transform: uppercase;
+  font-style: normal;
 
   @include onMobile {
     @include set-font(60, 65);
@@ -95,6 +97,7 @@
   font-weight: 700;
   background-color: $background-black;
   color: $basic-white;
+  font-style: normal;
 
   @include onMobile {
     margin-top: 16px;
