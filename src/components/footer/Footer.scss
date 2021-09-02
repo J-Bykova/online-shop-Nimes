@@ -1,0 +1,144 @@
+@import '../../utils/colors';
+@import '../../utils/sizes';
+@import '../../utils/fonts';
+@import '../../utils/resets';
+
+.footer {
+  max-width: 1366px;
+  min-width: 320px;
+  background-color: $basic-black;
+
+  @include onMobile {
+    padding: 16px;
+    display: block;
+  }
+  @include onMobileXl {
+    padding: 24px 26px;
+    display: grid;
+    justify-content: center;
+    gap: 0 50px;
+    grid-template-areas:
+    "nav logo"
+    "nav social"
+    "nav social";
+  }
+  @include onTablet {
+    padding: 24px 48px;
+  }
+  @include onDesktop {
+    padding: 50px 100px;
+  }
+}
+
+.footer__logo {
+  grid-area: logo;
+  margin: 0 auto;
+  display: block;
+  background-image: url("footer-logo.svg");
+  background-repeat: no-repeat;
+  background-size: 75px 17px;
+  width: 75px;
+  height: 17px;
+  cursor: pointer;
+
+  @include onMobileXl {
+    margin: auto;
+  }
+  @include onMobile {
+    margin: auto;
+  }
+}
+
+.footer__nav {
+  @include reset-list;
+  grid-area: nav;
+  display: flex;
+  justify-content: center;
+
+  @include onMobile {
+    display: block;
+    margin-top: 35px;
+  }
+  @include onMobileXl {
+    display: block;
+  }
+  @include onTablet {
+    margin-top: 35px;
+  }
+  @include onDesktop {
+    margin-top: 35px;
+  }
+}
+
+.footer__nav-item {
+  &:first-of-type {
+    margin: 0;
+  }
+
+  @include onMobile {
+    margin-top: 10px;
+    text-align: center;
+  }
+  @include onMobileXl {
+    margin-top: 15px;
+    text-align: center;
+  }
+  @include onTablet {
+    margin-left: 35px;
+  }
+  @include onDesktop {
+    margin-left: 35px;
+  }
+}
+
+.footer__nav-link {
+  @include set-font(18, 22);
+  cursor: pointer;
+  font-family: $primary-font;
+  font-weight: 500;
+  font-style: normal;
+  color: $basic-white;
+}
+
+.footer__socials {
+  @include reset-list;
+  grid-area: social;
+  display: flex;
+
+  @include onMobile {
+    margin-top: 35px;
+    justify-content: center;
+    align-items: center;
+  }
+  @include onMobileXl {
+    justify-content: center;
+    align-items: center;
+  }
+  @include onTablet {
+    margin-top: 35px;
+    justify-content: center;
+  }
+  @include onDesktop {
+    margin-top: 35px;
+    justify-content: center;
+  }
+}
+
+.footer__social {
+  &:first-of-type {
+    margin: 0;
+  }
+
+  @include onMobile {
+    margin-left: 18px;
+  }
+  @include onMobileXl {
+    margin-left: 18px;
+  }
+  @include onTablet {
+    margin-left: 28px;
+  }
+  @include onDesktop {
+    margin-left: 28px;
+  }
+}
